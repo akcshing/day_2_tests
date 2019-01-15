@@ -23,18 +23,18 @@ class FunctionsTest < MiniTest::Test
   #   multiply_result = multiply( 4, 2 )
   #   assert_equal( 8, multiply_result )
   # end
-
-  def test_divide()
-    divide_result = divide( 10, 2 )
-    assert_equal( 5, divide_result )
-  end
   #
-  # def test_length_of_string()
-  #   test_string = "A string of length 21"
-  #   length_of_string = length_of_string( test_string )
-  #   assert_equal( 21, length_of_string )
+  # def test_divide()
+  #   divide_result = divide( 10, 2 )
+  #   assert_equal( 5, divide_result )
   # end
-  #
+
+  def test_length_of_string()
+    test_string = "A string of length 21"
+    length_of_string = length_of_string( test_string )
+    assert_equal( 21, length_of_string )
+  end
+  
   # def test_join_string()
   #   string_1 = "Mary had a little lamb, "
   #   string_2 = "its fleece was white as snow"
