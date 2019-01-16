@@ -22,16 +22,16 @@ def length_of_string(string_length)
   return string_length.length()
 end
 
-def join_string(string1, string2)
+def join_string(string1, string2) # string_1 notation is better
   return string1 + string2
 end
 
-def add_string_as_number(string1, string2)
+def add_string_as_number(string1, string2) # string_1 notation is better
   return string1.to_i + string2.to_i
 end
 
-def number_to_full_month_name(month)
-  case month
+def number_to_full_month_name(month) # month_num parameter name better
+  case month    # this gives an implicit return, "month_name = case month" gives an explicit return assigned to a variable
     when 1
       return "January"
     when 2
@@ -56,11 +56,13 @@ def number_to_full_month_name(month)
       return "November"
     when 12
       return "December"
+    # return month_name for explicit return
   end
 end
 
-def number_to_short_month_name(month)
-  number_to_full_month_name(month)[0...3]
+def number_to_short_month_name(month)  # month_num parameter name better
+  # month_substring = number_to_full_month_name(month)[0...3] - explicit return assigned to a variable, better practice
+  number_to_full_month_name(month)[0...3]  # slicing - .slice(0...3) or (0..2) or (0, 3) - 2nd argument is exclusive
 end
 
 def volume_of_cube(length)
@@ -71,6 +73,6 @@ def volume_of_sphere(radius)
   return (Math::PI*4/3*(radius ** 3)).floor # .to_i works as well
 end
 
-def fahrenheit_to_celsius(f)
-  return (f - 32) * 5 / 9 
+def fahrenheit_to_celsius(f) # don't use single letter parameters, bad practice
+  return (f - 32) * (5 / 9) # dealing exclusively with integers. change all values to floats to get a float result.
 end
